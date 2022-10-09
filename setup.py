@@ -12,17 +12,18 @@ def read(filename):
     with io.open(filename, mode="r", encoding='utf-8') as fd:
         return re.sub(text_type(r':[a-z]+:`~?(.*?)`'), text_type(r'``\1``'), fd.read())
 
+
 with open('./requirements.txt', 'r', encoding='utf-8') as fin:
     requires_list = [line.strip() for line in fin if line and line.strip()]
 
 setup(
-    name="fastapi_microsoft_identity",
+    name="fastapi_ms_id",
     version="0.1.4",
-    url="https://github.com/425Show/fastapi_microsoft_identity",
+    url="https://github.com/biolimbo/fastapi_ms_id",
     license='MIT',
 
-    author="Christos Matskas",
-    author_email="christos.matskas@microsoft.com",
+    author="Santiago Forero Molano",
+    author_email="santiago.forero.molano@gmail.com",
 
     description="Azure AD authentication for Fast API",
     long_description=read("README.md"),
