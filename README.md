@@ -4,7 +4,7 @@ The Microsoft Identity library for Python's FastAPI provides [Azure Active Direc
 
 ## Install the package
 
-Install the Microsoft Identity for FastAPI library with [pip](https://pypi.org/project/fastapi-microsoft-identity/):
+Install the Microsoft Identity for FastAPI library with [pip](https://pypi.org/project/fastapi-ms-id/):
 
 ```
 pip install fastapi-microsoft-identity

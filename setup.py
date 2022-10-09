@@ -13,12 +13,9 @@ def read(filename):
         return re.sub(text_type(r':[a-z]+:`~?(.*?)`'), text_type(r'``\1``'), fd.read())
 
 
-with open('./requirements.txt', 'r', encoding='utf-8') as fin:
-    requires_list = [line.strip() for line in fin if line and line.strip()]
-
 setup(
     name="fastapi_ms_id",
-    version="0.1.4",
+    version="0.1.5",
     url="https://github.com/biolimbo/fastapi_ms_id",
     license='MIT',
 
@@ -31,7 +28,12 @@ setup(
 
     packages=find_packages(exclude=('tests',)),
 
-    install_requires=requires_list,
+    install_requires=["fastapi",
+                      "httpx",
+                      "requests",
+                      "python-jose",
+                      "pytest",
+                      "multidict"],
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
